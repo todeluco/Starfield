@@ -46,6 +46,7 @@ class OddballParticle extends Particle
 	}
 	void show(){
 		fill(myColor);
+		stroke(myColor);
 		ellipse((int)myX,(int)myY,50,50);
 		fill(0,255,0);
 		stroke(0,255,0);
