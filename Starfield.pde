@@ -34,6 +34,7 @@ class Particle
 	}
 	void show(){
 		fill(myColor);
+		stroke(255);
 		ellipse((int)myX, (int)myY, (int)mySize, (int)mySize);
 	}
 }
@@ -46,7 +47,6 @@ class OddballParticle extends Particle
 	void show(){
 		fill(myColor);
 		ellipse((int)myX,(int)myY,50,50);
-		push();
 		fill(0,255,0);
 		stroke(0,255,0);
 		ellipse((int)myX,(int)myY,25,20);
@@ -54,11 +54,10 @@ class OddballParticle extends Particle
 		ellipse((int)myX-10,(int)myY-4,15,10);
 		ellipse((int)myX,(int)myY-13,20,10);
 		ellipse((int)myX+10,(int)myY+15,15,7);
-		pop();
 	}
 	void move(){
-		myX = myX + (int)(Math.random()*2);
-		myY = myY + (int)(Math.random()*2);
+		myX = myX + (int)(Math.random()*4)-2;
+		myY = myY + (int)(Math.random()*4)-2;
 	}
 }
 
